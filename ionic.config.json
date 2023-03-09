@@ -1,5 +1,7 @@
 {
   "name": "pagseg",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

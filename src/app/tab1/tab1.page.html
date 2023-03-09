@@ -1,17 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-searchbar animated="true" placeholder="Eventos e Locais"></ion-searchbar>
+
+  <ion-slides [options]="opts">
+     <ion-slide *ngFor="let item of items" tappable>
+       <ion-grid>
+          <ion-row>
+            <img alt="Silhouette of mountains" src="{{item.img}}"/>
+          </ion-row>
+          <ion-row class="titulo">
+            <b>{{item.name}}</b>
+          </ion-row >
+          <ion-row class="fonte">
+             {{item.data}}
+          </ion-row>
+          <ion-row class="fonte">
+             {{item.local}}
+          </ion-row>
+       </ion-grid>
+     </ion-slide>
+   </ion-slides>
+
+   <div>
+    <ion-grid [fixed]="true">
+      <ion-row class="ion-no-padding">
+        <ion-col size="12">
+          <h4 class="section-header">Programe o seu Carnaval</h4>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
+    <ion-card color="light" *ngFor="let item of programacao" >
+      <ion-card-header>
+        <ion-card-title>{{item.dia}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+      </ion-card-content>
+    </ion-card>   </div>
+
 </ion-content>
