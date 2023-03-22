@@ -30,13 +30,10 @@
         </ion-col>
      </ion-row>
   </ion-grid>
-    <ion-card color="light" *ngFor="let item of programacao" >
-      <ion-card-header>
-        <ion-card-title>{{item.dia}}</ion-card-title>
-      </ion-card-header>
-
-      <ion-card-content>
-      </ion-card-content>
-    </ion-card>   </div>
+    <app-card-expansivo
+     *ngFor="let item of programacao; let i = index"
+     [titulo]="item.dia">
+    </app-card-expansivo>
+  </div>
 
 </ion-content>

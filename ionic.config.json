@@ -1,7 +1,8 @@
 {
   "name": "pagseg",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
